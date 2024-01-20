@@ -10,6 +10,8 @@ package chapter04;
 // 编程计算该人可以经过多少次路口，
 // 要求：使用while break方式完成
 
+import java.util.Scanner;
+
 public class Chapter04_HomeWork {
     public static void main(String[] args) {
         double now_money = 100000;
@@ -28,3 +30,19 @@ public class Chapter04_HomeWork {
 
 
 
+class Chapter04_HomeWork2{
+    //实现判断一个整数，属于哪个范围：大于0；小于0；等于0
+    public static void main(String[] args) {
+        Scanner myScanner = new Scanner(System.in);
+        System.out.println("请输入整数");
+        int num = myScanner.nextInt();
+        if (num > 0){
+            System.out.println("此数大于0");
+        } else if (num == 0){
+            System.out.println("此数等于0");
+        } else {
+            System.out.println("此数小于0");
+        }
+
+    }
+}
