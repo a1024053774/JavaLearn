@@ -61,3 +61,31 @@ class Chapter04_HomeWork3{
         }
     }
 }
+
+class Chapter04_HomeWork4{
+    //4.判断一个整数是否是水仙花数，
+    // 所谓水仙花数是指一个3位数，其各个位上数字立方和等于其本身。
+    // 例如：153=1*1*1+3*3*3+5*5*5
+    public static void main(String[] args) {
+        Scanner myScanner = new Scanner(System.in);
+        System.out.println("请输入一个三位的整数");
+        String integer_num = myScanner.next();
+        if (integer_num.length() == 3){
+            int hundred = integer_num.charAt(0) - '0';//将字符串转为整形
+            int ten = integer_num.charAt(1) - '0';//将字符串转为整形
+            int one = integer_num.charAt(2) - '0';//将字符串转为整形
+
+            int sum = hundred * hundred * hundred +
+                    ten * ten * ten + one * one * one;
+
+            if (sum == Integer.parseInt(integer_num)) {
+                System.out.println(integer_num + " 是一个水仙花数");
+            } else {
+                System.out.println(integer_num + " 不是一个水仙花数");
+            }
+        } else {
+            System.out.println("输入不是一个三位数，请重新输入");
+        }
+
+    }
+}
