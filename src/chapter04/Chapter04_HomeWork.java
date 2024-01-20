@@ -136,3 +136,16 @@ class Chapter04_HomeWork8{
         System.out.println("1-1/2+1/3-1/4...+1/99-1/100的和为: " + sum);
     }
 }
+
+class Chapter04_HomeWork9{
+    //求1+（1+2）+（1+2+3）+（1+2+3+4）+...+（1+2+3+..+100）的结果
+    public static void main(String[] args) {
+    int sum = 0;
+    int total_sum = 0;
+        for(int i = 1; i <=100;i++){
+        sum = sum + i;
+        total_sum = total_sum + sum;
+    }
+        System.out.println(total_sum);
+    }
+}
