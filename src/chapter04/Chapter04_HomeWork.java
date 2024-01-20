@@ -120,3 +120,19 @@ class Chapter04_HomeWork7{
         }
     }
 }
+
+class Chapter04_HomeWork8{
+    //求出1-1/2+1/3-1/4.....1/100的和
+    public static void main(String[] args) {
+        double result = 0;
+        double sum = 0;
+        for(int bottom_num = 1; bottom_num <= 100;bottom_num++){
+            if (bottom_num % 2 == 0){
+                sum = sum - 1.0 / bottom_num;
+            } else {
+                sum = sum + 1.0 / bottom_num;
+            }
+        }
+        System.out.println("1-1/2+1/3-1/4...+1/99-1/100的和为: " + sum);
+    }
+}
