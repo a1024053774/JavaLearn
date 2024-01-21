@@ -51,4 +51,20 @@ class ArrayExercise {
     }
 }
 
+class ArrayExercise02 {
+    //请求出一个数组int[]的最大值{4，-1，9，10，23}，并得到对应的下标
+    public static void main(String[] args) {
+        int array[] = {4, -1, 9, 10, 23, 101, -23, 56};
+        int max = array[0];
+        int maxIndex = 0;
+        for (int i = 0;i < array.length;i++){
+            if(array[i] > max){
+                max = array[i];
+                maxIndex = i;
+            }
+        }
+        System.out.println(max);
+        System.out.println(maxIndex);
+    }
+}
 
