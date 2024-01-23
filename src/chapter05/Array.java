@@ -130,3 +130,89 @@ class ArrayReverse {
         }
     }
 }
+
+class ArrayReverse02{
+    public static void main(String[] args) {
+        int arr[] = {11,22,33,44,55,66};
+        int arr2[] = new int[arr.length];
+
+        for(int i = 0;i < arr.length;i++){
+            arr2[i] = arr[arr.length -1 - i];
+        }
+        arr = arr2;
+        for (int i = 0;i < arr.length;i++){
+            System.out.print(arr[i] + "\t");
+        }
+    }
+}
+
+class ArrayAdd {
+    public static void main(String[] args) {
+    //要求：实现动态的给数组添加元素效果，实现对数组扩容。
+        // 1.原始数组使用静态分配int[]arr={1,2,3}
+        // 2.增加的元素4，直接放在数组的最后arr={1,2,3,4}
+        // 3.用户可以通过如下方法来决定是否继续添加，添加成功，是否继续？y/n
+    // 思路
+        // 1定义初始数组 int[] arr={1,2,3}//下标0-2
+        // 2定义-个新的数组 int[] arrNew = new int[arr。length+1];
+        // 3遍历 arr 数组，依次将arr的元素拷贝到 arrNew数组
+        // 4将 4 赋给 arrNew[arrNew.length － 1]=4;把4赋给arrNew最后一个元素
+        // 5让 arr 指向 arrNew ； arr = arrNew；那么 原来arr数组就被销毁
+
+        int arr[] = {1,2,3};
+        int arrNew[] = new int[arr.length + 1];
+        for (int i =0; i < arr.length;i++){
+            arrNew[i] = arr[i];
+        }
+        arrNew[arrNew.length - 1] = 4;
+        arr = arrNew;
+        System.out.println("扩容后arr为");
+        for (int i =0; i < arr.length;i++){
+            System.out.print(arr[i] + "\t");
+        }
+
+    }
+}
+
+class ArrayAddFinal {
+    public static void main(String[] args) {
+        //要求：实现动态的给数组添加元素效果，实现对数组扩容。
+        // 1.原始数组使用静态分配int[]arr={1,2,3}
+        // 2.增加的元素4，直接放在数组的最后arr={1,2,3,4}
+        // 3.用户可以通过如下方法来决定是否继续添加，添加成功，是否继续？y/n
+        // 思路
+        // 1定义初始数组 int[] arr={1,2,3}//下标0-2
+        // 2定义-个新的数组 int[] arrNew = new int[arr。length+1];
+        // 3遍历 arr 数组，依次将arr的元素拷贝到 arrNew数组
+        // 4将 4 赋给 arrNew[arrNew.length － 1]=4;把4赋给arrNew最后一个元素
+        // 5让 arr 指向 arrNew ； arr = arrNew；那么 原来arr数组就被销毁
+        //6创建一个Scanner接收用户输入
+        //7 不确定什么时候退出,使用do-while break控制
+        Scanner myScanner = new Scanner(System.in);
+        int arr[] = {1, 2, 3};
+        do {
+            int arrNew[] = new int[arr.length + 1];
+            for (int i = 0; i < arr.length; i++) {
+                arrNew[i] = arr[i];
+            }
+
+            System.out.println("请输入你要添加的元素");
+            int addNum = myScanner.nextInt();
+
+            arrNew[arrNew.length - 1] = addNum;
+            arr = arrNew;
+
+            System.out.println("扩容后arr为");
+            for (int i = 0; i < arr.length; i++) {
+                System.out.print(arr[i] + "\t");
+            }
+
+            System.out.println("是否继续添加 y/n");
+            char key = myScanner.next().charAt(0);
+            if (key == 'n') {
+                break;
+            }
+        }while (true);
+
+    }
+}
