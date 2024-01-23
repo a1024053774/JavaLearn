@@ -68,3 +68,65 @@ class ArrayExercise02 {
     }
 }
 
+class ArrayAssign {
+    public static void main(String[] args) {
+        //基本数据类型赋值,赋值方式为值拷贝
+        //n2的变化不会影响到n1的值
+        int n1 = 10;
+        int n2 = n1;
+        n2 = 80;
+        System.out.println(n1);
+        System.out.println(n2);
+
+        //数组在默认情况下是引用传递,赋的值是地址，赋值方式为引用赋值
+        //arr2变化会影响到arr1
+        int arr1[] = {1,2,3};
+        int arr2[] = arr1;
+        arr2[0] = 10;
+        System.out.println("=======arr1的值=========");
+        for(int i = 0;i < arr1.length;i++){
+            System.out.println(arr1[i]);
+            // 10,2,3
+        }
+    }
+}
+
+class ArrayCopy {
+    public static void main(String[] args) {
+        //将int[]arr1={10,20,30}；拷贝到arr2数组
+        // 要求数据空间是独立的
+        int arr3[] = {10,20,30};
+        int arr4[] = new int[arr3.length];
+
+        for (int i = 0; i < arr3.length; i++){
+            arr4[i] = arr3[i];
+        }
+        //修改arr4
+        arr4[0] = 100;
+        //arr3的值
+        for (int i =0;i < arr3.length;i++){
+            System.out.print(arr3[i] + " ");
+        }
+        System.out.print('\n');
+        //arr4的值
+        for (int i =0;i < arr4.length;i++){
+            System.out.print(arr4[i] + " ");
+        }
+
+    }
+}
+
+class ArrayReverse {
+    public static void main(String[] args) {
+        int arr[] = {11,22,33,44,55,66};
+        for ( int i = 0; i < arr.length / 2;i++){
+            int temp = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = arr[i];
+            arr[i] = temp;
+        }
+
+        for (int i = 0 ; i < arr.length;i++){
+            System.out.print(arr[i] + "\t");
+        }
+    }
+}
