@@ -13,6 +13,10 @@ public class Method {
 
         double area = p1.CircleArea(3.8);
         System.out.println("圆的面积是：" + area);
+
+        int map[][] = {{1,2,3},{4,5,6},{7,8,9}};
+        MyTools tool = new MyTools();
+        tool.printArr(map);
     }
 }
 class Person{
@@ -59,5 +63,17 @@ class Person{
         return area;
     }
 
+}
 
+class MyTools {
+    //方法,接收一个二维数组
+    public void printArr(int[][] map){
+        //对传入的map数组进行遍历
+      for (int i = 0;i < map.length;i++){
+          for(int j = 0;j < map[i].length;j++){
+              System.out.print(map[i][j] + "\t");
+          }
+            System.out.println();
+      }
+    }
 }
