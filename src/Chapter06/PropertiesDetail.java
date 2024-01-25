@@ -4,7 +4,7 @@ public class PropertiesDetail {
     public static void main(String[] args) {
 
         //new Person() 创建的对象空间(数据)才是真正的对象
-        Person p1 = new Person();
+        Person01 p1 = new Person01();
         System.out.println(p1.age);
         System.out.println(p1.name);
         System.out.println(p1.isPass);
@@ -13,7 +13,9 @@ public class PropertiesDetail {
     }
 }
 
-class Person{
+
+
+class Person01{
     int age;
     String name;
     double sal;
