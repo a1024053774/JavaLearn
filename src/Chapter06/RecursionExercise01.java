@@ -9,7 +9,7 @@ public class RecursionExercise01 {
         System.out.println("请输入想要的n(整数)");
         Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
-        
+
         int res = t1.Fibonacci(input);
         if (res != -1){
         System.out.println("当n等于" + input + "时,对应的斐波那契数=" + res);}
