@@ -43,7 +43,7 @@ class Person_1{
 
     public void hi(){
         String address = "Beijing";
-        String address = "nanjing";
+        
 
     }
 }
