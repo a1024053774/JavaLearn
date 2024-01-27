@@ -5,7 +5,7 @@ public class ThisDetail {
         P p = new P();
         p.f2();
 
-        
+
 
     }
 }
