@@ -3,7 +3,7 @@ package Chapter06;
 public class HanoiTower {
     public static void main(String[] args) {
         Hanoi hanoi = new Hanoi();
-        hanoi.move(64,'A','B','C');
+        hanoi.move(5,'A','B','C');
 
 
     }
