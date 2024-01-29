@@ -8,29 +8,34 @@ public class HomeWork03 {
     // 具体：如果价格>150，则更改为150，
     // 如果价格>100，更改为100，否则不变
     public static void main(String[] args) {
-        Book book = new Book();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("请输入价格(价格需大于0)");
-        double price_input = scanner.nextDouble();
-        double price_updated = book.updatePrice(price_input);
-        if (price_updated == -1){
-            System.out.println("您输入的价格有误,价格应该大于0");
-        } else {
-            System.out.println("更新后的价格是" + price_updated + "$");
-        }
+        Book book = new Book("笑傲江湖",999);
+        book.info();
+        book.updatePrice();
+        book.info();
     }
 }
 class Book{
+    String name;
+    double price;
 
-    public double updatePrice(double price){
-        if (price > 150){
-            return 150;
-        } else if (price > 100) {
-            return 100;
-        } else if (price <= 0){
-            return -1;
+    public Book(String name,double price){
+        this.name = name;
+        this.price = price;
+    }
+
+    public void updatePrice(){
+        if (this.price > 150){
+            price = 150;
+        } else if (this.price > 100) {
+            price = 100;
+        } else if (this.price <= 0){
+            System.out.println("价格不能为负数");
         } else {
-            return price;
+            System.out.println("价格不变");
         }
+    }
+
+    public void info(){
+        System.out.println("书名是" + name + ",价格是" + price + "$");
     }
 }
