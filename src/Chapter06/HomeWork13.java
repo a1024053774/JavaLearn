@@ -10,8 +10,9 @@ public class HomeWork13 {
     （4）在main方法中调用printAreas0方法，调用完毕后输出当前半径值。
      */
     public static void main(String[] args) {
+        Circle_13 c = new Circle_13();
         PassObject passObject = new PassObject();
-        passObject.printAreas(new Circle_13(),5);
+        passObject.printAreas(c,5);
     }
 
 }

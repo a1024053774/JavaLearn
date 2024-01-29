@@ -3,7 +3,7 @@ package Chapter06;
 public class HomeWork09 {
     public static void main(String[] args) {
         //定义Music类，里面有音乐名name、音乐时长times属性，并有播放play功能和返回本身属性信息的功能
-        // 方法getlnfo
+        // 方法getInfo
         Music music = new Music();
         music.playMusic();
         music.name = "Enchanted";
