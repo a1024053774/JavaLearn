@@ -21,13 +21,13 @@ public class HomeWork03 {
     }
 }
 class Book{
+
     public double updatePrice(double price){
         if (price > 150){
             return 150;
         } else if (price > 100) {
             return 100;
         } else if (price <= 0){
-
             return -1;
         } else {
             return price;
