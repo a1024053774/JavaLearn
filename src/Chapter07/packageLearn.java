@@ -1,4 +1,4 @@
-package Chapter07.com;
+package Chapter07;
 
 import java.util.Arrays;
 
