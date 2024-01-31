@@ -15,4 +15,8 @@ public class A {
     public A(){}
     public A(String name){}
     public A(String name, int age){}
+
+    public void cal(){
+        System.out.println("A类的cal方法");
+    }
 }

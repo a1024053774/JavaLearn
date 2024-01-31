@@ -21,4 +21,14 @@ public class B extends A{
         super("jack",18); //两个参数的
     }
 
+
+    public void sum(){
+        System.out.println("B类的sum方法");
+        //希望调用父类A的cal方法
+        //super,this,直接访问是一样的,因为没有重名
+        cal();
+        this.cal();
+        super.cal();
+
+    }
 }
