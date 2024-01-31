@@ -1,9 +1,9 @@
-package Chapter07.com.poly_;
+package Chapter07.com.poly_.elicit;
 
-public class Animal {
+public class Food {
     private String name;
 
-    public Animal(String name) {
+    public Food(String name) {
         this.name = name;
     }
 

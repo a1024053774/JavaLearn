@@ -1,4 +1,4 @@
-package Chapter07.com.poly_;
+package Chapter07.com.poly_.elicit;
 
 public class Poly01 {
     public static void main(String[] args) {
