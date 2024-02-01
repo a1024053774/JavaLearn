@@ -4,12 +4,13 @@ public class Worker extends Employee{
     public Worker(String name, double monthSalary) {
         super(name, monthSalary);
     }
+
     public void work(){
-        System.out.println("普通员工" + getName() + " is working");
+        System.out.println("员工" + getName() + " 正在工作");
     }
 
     @Override
-    public double getAnnual() {//因为普通员工没有其他收入,直接调用父类
+    public double getAnnual() {
         return super.getAnnual();
     }
 }

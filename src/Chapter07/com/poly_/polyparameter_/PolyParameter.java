@@ -2,28 +2,25 @@ package Chapter07.com.poly_.polyparameter_;
 
 public class PolyParameter {
     public static void main(String[] args) {
-
-        Worker tom = new Worker("tom", 2500);
-        Manager milan = new Manager("milan", 5000, 200000);
         PolyParameter polyParameter = new PolyParameter();
-        polyParameter.showEmpAnnual(tom);
-        polyParameter.showEmpAnnual(milan);
-
-        polyParameter.testWork(tom);
-        polyParameter.testWork(milan);
-
+        Worker zhangSan = new Worker("张三", 2500);
+        Manager laoLi = new Manager("老李", 8000, 200000);
+        System.out.println(polyParameter.showEmpAnnual(zhangSan));
+        System.out.println(polyParameter.showEmpAnnual(laoLi));
+        polyParameter.testWork(zhangSan);
+        polyParameter.testWork(laoLi);
     }
 
-    public void showEmpAnnual(Employee e){
-        System.out.println(e.getAnnual());//动态绑定机制
-    }
-    public void testWork(Employee e){
+   public double showEmpAnnual(Employee e){
+        return e.getAnnual();
+   }
+   public void testWork(Employee e){
         if (e instanceof Worker){
             ((Worker) e).work();
-        } else if (e instanceof Manager) {
+        } else if (e instanceof Manager){
             ((Manager) e).manage();
         } else {
-            System.out.println(" === ");
+            System.out.println("不做处理");
         }
-    }
+   }
 }

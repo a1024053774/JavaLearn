@@ -16,11 +16,11 @@ public class Manager extends Employee {
         this.bonus = bonus;
     }
     public void manage(){
-        System.out.println("经理 " + getName() + " is managing");
+        System.out.println("经理" + getName() + " 正在管理");
     }
 
     @Override
     public double getAnnual() {
-        return super.getAnnual() + bonus;
+        return super.getAnnual() + getBonus();
     }
 }
