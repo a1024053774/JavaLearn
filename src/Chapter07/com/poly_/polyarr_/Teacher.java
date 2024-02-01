@@ -20,4 +20,8 @@ public class Teacher extends Person{
     public String say() {
         return "老师 " + super.say() + " " + salary;
     }
+
+    public void teach(){
+        System.out.println("老师 " + getName() + " 正在讲课");
+    }
 }
