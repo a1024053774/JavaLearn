@@ -1,5 +1,10 @@
 package Chapter07.com.homework.hm01;
 
+/**
+ * 1.定义一个Person类{name，age,job},
+ * 初始化Person对象数组，有3个person对象，
+ * 并按照age从大到小进行排序，提示，使用冒泡排序Homework01.java
+ */
 public class Homework01 {
     //定义一个Person类{name,age,job},初始化Person对象数组，有3个person对象，并按照age从大到小进行排序，提示，使用冒泡排序
     public static void main(String[] args) {
