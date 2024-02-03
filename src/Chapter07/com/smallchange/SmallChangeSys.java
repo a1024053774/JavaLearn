@@ -48,22 +48,31 @@ public class SmallChangeSys {
                 case "1":
                     System.out.println(details);
                     break;
+
                 case "2":
                     System.out.println("收益入账金额:");
                     money = scanner.nextDouble();
                     //money的值应该校验
+                    if (money <= 0){
+                        System.out.println("收入应该大于0");
+                        break;
+                    }
 
                     balance += money;
                     //拼接收益入账信息到details
                     date = new Date();
                     details += "\n收益入账\t+" + money +"\t" + sdf.format(date) + "\t" + balance + "￥";
                     break;
+
                 case "3":
 
                     System.out.println("消费金额");
                     money = scanner.nextDouble();
                     //money的值需要校验
-
+                    if ( money <= 0 || money > balance){
+                        System.out.println("消费的金额应该在0~" + balance + "之间");
+                        break;
+                    }
                     System.out.println("消费说明:");
                     note = scanner.next();
                     balance -= money;
