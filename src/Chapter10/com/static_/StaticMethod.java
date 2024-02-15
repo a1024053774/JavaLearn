@@ -8,6 +8,16 @@ public class StaticMethod {
         Stu.pay(200);
         //输出当前收到的总学费
         Stu.showFee();
+
+        double n1 = 200;
+        double n2 = 400;
+        System.out.println(MyTools.calSum(n1,n2));
+    }
+}
+
+class MyTools {
+    public static double calSum(double n1, double n2){
+        return n1 + n2;
     }
 }
 
